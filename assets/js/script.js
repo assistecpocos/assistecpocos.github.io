@@ -56,3 +56,18 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
+
+document.getElementById("mapItem").addEventListener("click", function() {
+  // Endereço específico que você deseja direcionar no Google Maps
+  var endereco = "Rua Aurélio Alves da Cruz,375";
+
+  // Substitua os espaços no endereço por '+' para a URL do Google Maps
+  endereco = endereco.replace(/ /g, '+');
+
+  // URL do Google Maps com o endereço específico
+  var googleMapsURL = "https://www.google.com/maps?q=" + endereco;
+
+  // Redirecionar para a página do Google Maps
+  window.location.href = googleMapsURL;
+});
